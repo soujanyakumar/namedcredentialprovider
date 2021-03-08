@@ -9,7 +9,7 @@ router.post('/', function (req, res, next) {
   console.log('headers : ' + JSON.stringify(req.headers));
   console.log('body : ' + JSON.stringify(req.body));
   var userpass = new Buffer.from((req.headers.authorization || '').split(' ')[1] || '', 'base64').toString();
-
+  console.log('userpass : ' + userpass);
   res.send('respond with a resource');
 });
 
